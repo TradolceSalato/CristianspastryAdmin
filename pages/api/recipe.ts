@@ -29,7 +29,7 @@ export default function Recipe_API(
     case 'POST' :
       const ricetta = req.body;
       console.log(ricetta);
-      Ricette.push(ricetta);
+      Recipes.push(ricetta);
       res.status(200).json(Ricette);
       break; 
     default :

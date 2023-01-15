@@ -1,6 +1,6 @@
 import { Constants } from "../../utils/constants";
 import { Form, Button } from 'react-bootstrap';
-import styles from "../styles/AddRecipe.form.module.css";
+import styles from "../styles/styles.module.css";
 import { FormEventHandler } from "react";
 import axios from 'axios';
 
@@ -29,8 +29,17 @@ const handleSubmit2 = async (event: any) => {
   event.preventDefault();
   const formData = new FormData(event.target);
   try{
-     const res = await axios.post('http://localhost:3000/api/recipe', formData);
-     console.log(res.data);
+     const res = await fetch('http://localhost:3000/api/recipe', {
+      method : 'POST',
+      body : formData,
+     }).then((response)=>{
+      if(response.status == 200) {
+        alert('Recetta Salvata con successo')
+        console.log(response)
+      } else {
+        alert('errore durante l\'invio dei dati')
+      }
+     });
   }catch(err){
      console.log(err);
   }

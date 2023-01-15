@@ -12,7 +12,7 @@ export const Constants = {
     { name: 'Calendar', href: '#', current: false }
   ],
   Form: {
-    Action: "http://localhost:3000/api/recipe",
+    Action: "http://localhost:3000/getrecipe",
     Method: "POST",
     Name : "Aggiungi Ricetta",
     encType : "multipart/form-data",

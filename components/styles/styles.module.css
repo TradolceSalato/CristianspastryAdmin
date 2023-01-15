@@ -34,3 +34,18 @@
       width: 420px;
     }
   }
+
+
+/* Card */
+
+
+.Card {
+  width: 18rem;  
+}
+
+
+.containerCard {
+flex-direction: row;
+display:inline-flex;
+margin: 2%;
+}

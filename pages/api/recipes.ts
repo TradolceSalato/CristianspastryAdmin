@@ -1,3 +1,4 @@
+import { Recipe } from "../../utils/models";
 
 
 const Recipes = [
