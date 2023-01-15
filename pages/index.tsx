@@ -2,10 +2,10 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import { Constants } from '../utils/constants'
-import LoginForm from '../components/Login_Form'
+import LoginForm from '../components/Forms/Login_Form'
 import Link from 'next/link'
-import { resolveHref } from 'next/dist/shared/lib/router/router'
-
+import Router from 'next/router'
+import Home  from './home'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Login() {
@@ -18,8 +18,12 @@ export default function Login() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-       <LoginForm Accedi={Accedi}/>
-      <footer className={styles.footer}>
+      <body>
+      <LoginForm Accedi={Accedi}/>
+      {/* eslint-disable-next-line @next/next/no-sync-scripts*/}
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossOrigin="anonymous"></script>
+      </body>
+    <footer className={styles.footer}>
       Copyright © 2023 {" Creato Da "} <Link href={"#social-nettworks"}>{Constants.Author}</Link>.
       </footer>
     </>
@@ -28,4 +32,5 @@ export default function Login() {
 
 const Accedi = () => {
   alert('Accesso effettuato')
+  Router.push('/home')
 }

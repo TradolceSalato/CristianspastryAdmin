@@ -1,13 +1,14 @@
+   
 
 
 import React from 'react'
-import SlideNavbar from '../components/SlideNav_Bar'
+import Layout from '../components/Layout/Layout'
+
 
 export default function Home() {
   return (
-   <>
-    <SlideNavbar/>
-    <h5>CIAO A TUTTI</h5>
-   </>
+    <Layout>
+      
+    </Layout>
   )
 }

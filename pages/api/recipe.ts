@@ -1,6 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-
+import  { Recipe } from '../../utils/models';
+import Recipes  from './recipes';
 type Data = {
   Ricette : []
 }
@@ -12,7 +13,10 @@ type Data = {
   res.status(200).json({ name: 'John Doe' })
 }*/
 
-let Ricette: any[] = [];
+let Ricette: any[] = [
+  
+];
+
 export default function Recipe_API(
   req : NextApiRequest,
   res: NextApiResponse
@@ -20,7 +24,7 @@ export default function Recipe_API(
   const { method } = req;
   switch(method) {
     case 'GET' : 
-     res.status(200).json({"Ricette":"LISTA DI RICETTE"})
+     res.status(200).json(Recipes)
      break;
     case 'POST' :
       const ricetta = req.body;

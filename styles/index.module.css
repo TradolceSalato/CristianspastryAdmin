@@ -1,0 +1,19 @@
+    .footer {
+    text-align: center;
+    justify-content: center;
+    display: block;
+    padding: 3px;
+  }
+  
+  .html {
+    overflow-x: scroll;
+    max-width: 100%;
+  }
+  
+.html{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+  }
+
