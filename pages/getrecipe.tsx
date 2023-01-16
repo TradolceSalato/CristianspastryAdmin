@@ -30,7 +30,9 @@ export default function GetRecipe({ data }: InferGetStaticPropsType<typeof getSe
 
 
 export async function getServerSideProps(context: any) {
-   const res = await fetch(`http://localhost:3000/api/recipe`)
+   const Dev_url = `http://localhost:3000/api/recipe`;
+   const Prod_url= `https://cristianspastry-admin.vercel.app/api/recipe`;
+   const res = await fetch(Prod_url)
    const data = await res.json()
 
    if (!data) {
