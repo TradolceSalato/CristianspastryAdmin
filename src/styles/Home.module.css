@@ -1,28 +1,3 @@
-
-.title {
-  color: red;
-  text-align: center;
-  justify-content: center;
-}
-
-
-.container_login_form{
-  text-align: center;
-  justify-content: center;
-  display: block;
-}
-
-.body{
-  box-sizing: border-box;
-  justify-content: center;
-  text-align: center;
-}
-
-.footer {
-  text-align: center;
-  justify-content: center;
-}
-
 .main {
   display: flex;
   flex-direction: column;
